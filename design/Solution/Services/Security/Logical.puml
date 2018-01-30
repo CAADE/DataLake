@@ -1,0 +1,14 @@
+@startuml
+
+package "Services/Security" {
+    interface "Services/Security" {
+
+    }
+    CLI ()-- "Services/Security"
+    REST ()-- "Services/Security"
+    Web ()-- "Services/Security"
+
+}
+
+
+@enduml

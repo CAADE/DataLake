@@ -1,0 +1,14 @@
+@startuml
+
+package "Cloud/HDFS-Data-Cloud" {
+    interface "Cloud/HDFS-Data-Cloud" {
+
+    }
+    CLI ()-- "Cloud/HDFS-Data-Cloud"
+    REST ()-- "Cloud/HDFS-Data-Cloud"
+    Web ()-- "Cloud/HDFS-Data-Cloud"
+
+}
+
+
+@enduml

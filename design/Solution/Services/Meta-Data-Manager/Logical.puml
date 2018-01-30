@@ -1,0 +1,14 @@
+@startuml
+
+package "Services/Meta-Data-Manager" {
+    interface "Services/Meta-Data-Manager" {
+
+    }
+    CLI ()-- "Services/Meta-Data-Manager"
+    REST ()-- "Services/Meta-Data-Manager"
+    Web ()-- "Services/Meta-Data-Manager"
+
+}
+
+
+@enduml

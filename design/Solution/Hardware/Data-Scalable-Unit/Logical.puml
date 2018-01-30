@@ -1,0 +1,14 @@
+@startuml
+
+package "Hardware/Data-Scalable-Unit" {
+    interface "Hardware/Data-Scalable-Unit" {
+
+    }
+    CLI ()-- "Hardware/Data-Scalable-Unit"
+    REST ()-- "Hardware/Data-Scalable-Unit"
+    Web ()-- "Hardware/Data-Scalable-Unit"
+
+}
+
+
+@enduml

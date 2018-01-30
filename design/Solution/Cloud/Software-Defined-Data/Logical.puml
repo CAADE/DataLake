@@ -1,0 +1,14 @@
+@startuml
+
+package "Cloud/Software-Defined-Data" {
+    interface "Cloud/Software-Defined-Data" {
+
+    }
+    CLI ()-- "Cloud/Software-Defined-Data"
+    REST ()-- "Cloud/Software-Defined-Data"
+    Web ()-- "Cloud/Software-Defined-Data"
+
+}
+
+
+@enduml

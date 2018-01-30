@@ -1,0 +1,14 @@
+@startuml
+
+package "Cloud" {
+    interface "Cloud" {
+
+    }
+    CLI ()-- "Cloud"
+    REST ()-- "Cloud"
+    Web ()-- "Cloud"
+
+}
+
+
+@enduml

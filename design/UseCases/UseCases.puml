@@ -1,0 +1,40 @@
+@startuml
+:Data Consumer: as consumer
+:Data Scientist: as nerd
+:Data Source: as source
+:Operations Manager: as ops
+:Stack Developer: as stack
+
+rectangle "Data Lake" {
+  (Govern Data) as GD
+  (Manage Data Blueprints) as MDB
+  (Manage Data Catalog) as MDC
+  (Manage Data Exchange) as MDE
+  (Manage Data Lifecycle) as MDL
+  (Manage Ingestion) as MI
+  (Ingest Data) as ID
+  (Manage Meta Data) as MMD
+  (Egress Data) as ED
+  (Manage Service Stack) as MSS
+}
+
+source --> ID
+ops -> MI
+ops -> GD
+nerd --> MDB
+nerd --> MDC
+ops --> MDE
+ops --> MDL
+nerd --> MMD
+ED --> consumer
+ID .. MDB
+MDB .. MDE
+ID .. MDL
+MDE .. ED
+MDC .. MMD
+MMD .. MDB
+GD .. MDL
+stack --> MSS
+
+
+@enduml

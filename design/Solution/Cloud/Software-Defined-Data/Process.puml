@@ -1,0 +1,18 @@
+@startuml
+
+partition "Cloud/Software-Defined-Data" {
+
+}
+
+partition SubSystem  #cccccc {
+  (*) --> "Create Project"
+  --> "Write Code"
+}
+
+partition "Cloud/Software-Defined-Data" {
+  "Write Code" --> "Test Code"
+  "Test Code" --> "Deploy Code"
+  "Deploy Code" --> (*)
+}
+
+@enduml

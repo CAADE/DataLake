@@ -1,0 +1,14 @@
+@startuml
+
+package "Hardware" {
+    interface "Hardware" {
+
+    }
+    CLI ()-- "Hardware"
+    REST ()-- "Hardware"
+    Web ()-- "Hardware"
+
+}
+
+
+@enduml

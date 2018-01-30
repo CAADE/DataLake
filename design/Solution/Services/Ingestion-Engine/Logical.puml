@@ -1,0 +1,14 @@
+@startuml
+
+package "Services/Ingestion-Engine" {
+    interface "Services/Ingestion-Engine" {
+
+    }
+    CLI ()-- "Services/Ingestion-Engine"
+    REST ()-- "Services/Ingestion-Engine"
+    Web ()-- "Services/Ingestion-Engine"
+
+}
+
+
+@enduml
