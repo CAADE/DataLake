@@ -1,0 +1,9 @@
+@startuml
+Actor "Data Consumer" as A
+
+box "Consume Data" #lightblue
+participant "data lake" as S
+A -> S : Query Data Store
+end box
+
+@enduml

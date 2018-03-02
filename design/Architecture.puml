@@ -3,17 +3,58 @@
 skinparam packageStyle rect
 
 package data-lake {
-package "SubSystem1" #aaffff {
+    package "Data Lake Portal" #ffaa66 { }
+    package "Services" #aaffff {
+      package "Blueprint Repository"{ }
+      package "Ingestion Engine" { }
+      package "Meta Data Manager" { }
+      package "Analytics" { }
+      package "Raw Storage" { }
+      package "Secondary Storage" { }
+      package "Egress Engine" { }
+      package "Streaming" { }
+      package "Security" { }
+    }
+    package "Common Cloud Core" #aaffaa {
+      package "Software Defined Data" { }
+      package "Data Coordinator" { }
+      package "Data Location Service" { }
+    }
+    package "Hardware" #ffffaa {
+      package "Storage Scalable Unit" { }
+    }
 }
-package "SubSystem2" #aaffaa {
-}
-package "SubSystem3" #ffaaaa {
-}
-}
-
-SubSystem1 --> SubSystem2
-SubSystem2 --> SubSystem3
+"Data Lake Portal" --> "Services"
+"Data Lake Portal" --> "Common Cloud Core"
+Services ..> "Common Cloud Core"
+"Common Cloud Core" ..> Hardware
+"Meta Data Manager" --> "Analytics"
+"Ingestion Engine" -> "Raw Storage"
+"Ingestion Engine" -> "Streaming"
+"Ingestion Engine" -> "Analytics"
+"Analytics" --> "Secondary Storage"
+"Streaming" --> "Egress Engine"
+"Secondary Storage" --> "Egress Engine"
+"Raw Storage" --> "Egress Engine"
 
 
 @enduml
-
+@startuml
+note top of AVMWare
+1. Burst outside of the Private Cloud. Expand  the spark cluster across cloud boundaries. (Slow)
+2. Move the whole cluster to cluster to another Cloud. This includes moving data.
+3. Blue Data running on top of Distributed spark cluster.
+end note
+Cloud AVMWare {
+  package lowServices {
+  }
+}
+Cloud BOpenStack {
+   package highServices {
+   }
+}
+Cloud CAWS {
+  package mediumServices {
+  }
+}
+@enduml

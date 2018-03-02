@@ -1,0 +1,14 @@
+@startuml
+
+package "Services/Egress-Engine" {
+    interface "Services/Egress-Engine" {
+
+    }
+    CLI ()-- "Services/Egress-Engine"
+    REST ()-- "Services/Egress-Engine"
+    Web ()-- "Services/Egress-Engine"
+
+}
+
+
+@enduml

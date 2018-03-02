@@ -1,0 +1,14 @@
+@startuml
+
+package "Services/Streaming" {
+    interface "Services/Streaming" {
+
+    }
+    CLI ()-- "Services/Streaming"
+    REST ()-- "Services/Streaming"
+    Web ()-- "Services/Streaming"
+
+}
+
+
+@enduml

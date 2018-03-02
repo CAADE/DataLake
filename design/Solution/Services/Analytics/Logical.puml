@@ -1,0 +1,14 @@
+@startuml
+
+package "Services/Analytics" {
+    interface "Services/Analytics" {
+
+    }
+    CLI ()-- "Services/Analytics"
+    REST ()-- "Services/Analytics"
+    Web ()-- "Services/Analytics"
+
+}
+
+
+@enduml

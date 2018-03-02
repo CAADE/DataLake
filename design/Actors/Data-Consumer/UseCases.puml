@@ -2,12 +2,20 @@
 
 left to right direction
 
-:Data-Consumer: as Actor
+:Data Consumer: as Actor
 
-rectangle "system.name" {
-    (Use Case) as U1
+rectangle "Data Lake" {
+    (Consume Data) as U1
+    (Subscribe to Data) as U11
+    (Query Data Store) as U12
+    (Visualize Data) as U13
+    (Analyze Data) as U14
 }
 
-Actor --> U1
+U11 --|> U1
+U12 --|> U1
+U13 --|> U1
+U14 --|> U1
+Actor -> U1
 
 @enduml

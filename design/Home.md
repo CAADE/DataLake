@@ -28,11 +28,25 @@ its raw format.
 
 ## [Users](Actors)
 
- * _Actor_
+ * [Data Consumer](Actor-Data-Consumer) - Consumes information created by the Data Scientist
+ * [Data Scientist](Actor-Data-Scientist) - Creates information from the Data Lake for consumers
+ * [Data Source](Actor-Data-Source) - Source of data for the Data Lake.
+ * [Operations Manager](Actor-Operations-Manager) - Manages the operations of the Data Lake.
+ * [Stack Developer](Actor-Stack-Developer) - Develops stacks of services to be consumed by the Data Scientist.
 
 ## High level Use Cases
 
-* _UseCases_
+* [Consume Data](UseCase-Consume-Data) - Consume Data from the Data Lake
+* [Govern Data](UseCase-Govern-Data) - Govern Data in the Data Lake
+* [Ingest Data](UseCase-Ingest-Data) - Ingest Data into the Data Lake
+* [Manage Data Blueprints](UseCase-Data-Blueprints) - Manage reusable Data Blueprints in a repo.
+* [Manage Data Catalog](UseCase-Data-Catalog) - Manage the Data Catalog that describes the Data Catalog.
+* [Manage Data Exchange](UseCase-Data-Exchange) - Setup and manage data exchange between multiple clouds or data sources.
+* [Manage Data Lifecycle](UseCase-Data-Lifecycle) - Manage the lifecycle of the data. When it migrates to other tiers or is removed.
+* [Manage Egress Engine](UseCase-Egress-Engine) - Manage the export or egress points of the Data Lake.
+* [Manage Ingestion](UseCase-Manage-Ingestion) - Manage the ingestion points of the Data Lake. 
+* [Manage Meta Data](UseCase-Manage-Meta-Data) - Manage the Meta Data in the Data Lake.
+* [Manage Service Stack](UseCase-Service-Stack) - Manage Service Stacks in the Data Lake. This is an extension of the common cloud core
 
 ![Image](./UseCases/UseCases.png)
 
@@ -43,7 +57,6 @@ is a Software Defined Data layer that is an extenstion of the traditional Softwa
 Subsystem. The SDD abstracts typical storage access and see it as a data fabric/plane that the services
 can access reliably and consistently. This contains a set of connectors and plugins for the different 
 filesystems, types of storage, etc...
-
 
 ![Image](./Solution/Logical.png)
 

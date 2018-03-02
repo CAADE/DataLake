@@ -1,0 +1,18 @@
+@startuml
+
+partition "Services/Analytics" {
+
+}
+
+partition SubSystem  #cccccc {
+  (*) --> "Create Project"
+  --> "Write Code"
+}
+
+partition "Services/Analytics" {
+  "Write Code" --> "Test Code"
+  "Test Code" --> "Deploy Code"
+  "Deploy Code" --> (*)
+}
+
+@enduml

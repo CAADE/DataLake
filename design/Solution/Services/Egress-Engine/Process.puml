@@ -1,0 +1,18 @@
+@startuml
+
+partition "Services/Egress-Engine" {
+
+}
+
+partition SubSystem  #cccccc {
+  (*) --> "Create Project"
+  --> "Write Code"
+}
+
+partition "Services/Egress-Engine" {
+  "Write Code" --> "Test Code"
+  "Test Code" --> "Deploy Code"
+  "Deploy Code" --> (*)
+}
+
+@enduml

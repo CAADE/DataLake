@@ -1,0 +1,14 @@
+@startuml
+
+package "Portal" {
+    interface "Portal" {
+
+    }
+    CLI ()-- "Portal"
+    REST ()-- "Portal"
+    Web ()-- "Portal"
+
+}
+
+
+@enduml

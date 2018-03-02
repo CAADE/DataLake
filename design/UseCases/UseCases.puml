@@ -12,6 +12,7 @@ rectangle "Data Lake" {
   (Manage Data Exchange) as MDE
   (Manage Data Lifecycle) as MDL
   (Manage Ingestion) as MI
+  (Manage Egress) as ME
   (Ingest Data) as ID
   (Manage Meta Data) as MMD
   (Egress Data) as ED
@@ -35,6 +36,7 @@ MDC .. MMD
 MMD .. MDB
 GD .. MDL
 stack --> MSS
-
+ops --> ME
+ME .. ED
 
 @enduml
