@@ -1,6 +1,0 @@
-@startuml
-actor User
-
-User -> "Services/Analytics": UseCase
-
-@enduml

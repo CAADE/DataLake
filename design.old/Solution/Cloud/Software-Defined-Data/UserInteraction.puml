@@ -1,6 +1,0 @@
-@startuml
-actor User
-
-User -> "Cloud/Software-Defined-Data": UseCase
-
-@enduml

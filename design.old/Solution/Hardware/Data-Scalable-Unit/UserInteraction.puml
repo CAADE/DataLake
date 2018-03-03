@@ -1,6 +1,0 @@
-@startuml
-actor User
-
-User -> "Hardware/Data-Scalable-Unit": UseCase
-
-@enduml

@@ -1,6 +1,0 @@
-@startuml
-actor User
-
-User -> "Hardware": UseCase
-
-@enduml

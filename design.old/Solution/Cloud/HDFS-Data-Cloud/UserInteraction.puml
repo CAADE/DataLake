@@ -1,6 +1,0 @@
-@startuml
-actor User
-
-User -> "Cloud/HDFS-Data-Cloud": UseCase
-
-@enduml

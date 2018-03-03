@@ -1,9 +1,0 @@
-@startuml
-Actor "Data Consumer" as A
-
-box "Consume Data" #lightblue
-participant "data lake" as S
-A -> S : Visualize Data
-end box
-
-@enduml

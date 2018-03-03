@@ -1,6 +1,0 @@
-@startuml
-actor User
-
-User -> "Services/Meta-Data-Manager": UseCase
-
-@enduml
