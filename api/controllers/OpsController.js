@@ -11,7 +11,7 @@ module.exports = {
    * `OpsController.method()`
    */
   method: function (req, res) {
-
+    console.log(res);
   }
-}
+};
 

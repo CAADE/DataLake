@@ -11,25 +11,25 @@ const _ = require('lodash');
 
 let client = new Client();
 _.each(Object.keys(action.inputs), function(key) {
-    if(key != "mode") { // Used to force json output instead of html
-        program.option('-' + key[0] + ", --" + key + " <" + action.inputs[key].type + ">", action.inputs[key].description);
-    }
+  if(key !== 'mode') { // Used to force json output instead of html
+    program.option('-' + key[0] + ', --' + key + ' <' + action.inputs[key].type + '>', action.inputs[key].description);
+  }
 });
 program.parse(process.argv);
 
-let url = config.Url + "/stack-developer/stack?";
-let params = [ "mode=json" ]; // Json results expected.
+let url = config.Url + '/stack-developer/stack?';
+let params = [ 'mode=json' ]; // Json results expected.
 _.each(Object.keys(action.inputs), function(key) {
-    if(key != "mode" && program.hasOwnProperty(key)) {
-        params.push(key + "=" + program[key]);
-    }
+  if(key !== 'mode' && program.hasOwnProperty(key)) {
+    params.push(key + '=' + program[key]);
+  }
 });
-url += params.join("&");
+url += params.join('&');
 
 client.get(url, function (data, response) {
   // parsed response body as js object
   if (data.error) {
-    console.error("Error:" + data.error);
+    console.error('Error:' + data.error);
   }
   else {
     console.log(data);

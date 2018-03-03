@@ -11,7 +11,7 @@ module.exports = {
    * `SourceController.method()`
    */
   method: function (req, res) {
-
+    console.log(res);
   }
-}
+};
 

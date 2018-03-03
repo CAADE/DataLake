@@ -11,7 +11,7 @@ module.exports = {
    * `ScientistController.method()`
    */
   method: function (req, res) {
-
+    console.log(res);
   }
-}
+};
 

@@ -1,4 +1,4 @@
-/**
+/*
  * StackController
  *
  * @description :: Server-side logic for managing the Actor Stack-Developer
@@ -6,12 +6,11 @@
  */
 
 module.exports = {
-
   /**
    * `StackController.method()`
    */
   method: function (req, res) {
-
+    console.log(res);
   }
-}
+};
 
